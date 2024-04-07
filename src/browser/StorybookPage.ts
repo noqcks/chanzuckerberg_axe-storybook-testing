@@ -31,7 +31,7 @@ export type StorybookStory = Pick<
 export async function getStories(page: Page): Promise<StorybookStory[]> {
   const rawStories = await pTimeout(
     page.evaluate(fetchStoriesFromWindow),
-    10_000,
+    {milliseconds: 10_000},
   ).catch((e) => {
     throw new Error(dedent`
       Stories could not be retrieved from storybook!
