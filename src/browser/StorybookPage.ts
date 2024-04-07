@@ -1,6 +1,6 @@
 import type {PreviewWeb, StoryStore} from '@storybook/preview-api';
 import type {Renderer, StoryIdentifier, Parameters} from '@storybook/types';
-import pTimeout from 'p-timeout';
+import * as pTimeout from 'p-timeout';
 import type {Page} from 'playwright';
 import dedent from 'ts-dedent';
 
